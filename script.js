@@ -1,12 +1,13 @@
-const cards = document.querySelectorAll(".card");
+// simple fade-in
+const elements = document.querySelectorAll(".card");
 
-cards.forEach((card, index) => {
-  card.style.opacity = 0;
-  card.style.transform = "translateY(20px)";
+elements.forEach((el, i) => {
+  el.style.opacity = 0;
+  el.style.transform = "translateY(20px)";
 
   setTimeout(() => {
-    card.style.transition = "0.5s";
-    card.style.opacity = 1;
-    card.style.transform = "translateY(0)";
-  }, index * 200);
+    el.style.transition = "0.5s";
+    el.style.opacity = 1;
+    el.style.transform = "translateY(0)";
+  }, i * 150);
 });
